@@ -1,23 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="App">
+      <nav className='navbar app'>SomeThing</nav>
+      <nav className='navbar board'>SomeThing</nav>
+      <div className='board-columns'>
+        <div className='column'>
+          <div className='Header'>Header</div>
+          <ul>
+            <li>
+              <img src='https://haycafe.vn/wp-content/uploads/2022/02/Anh-gai-xinh-Viet-Nam.jpg' alt=''/>
+              title: SomrThing
+            </li>
+            <li>Doing Something</li>
+            <li>Doing Something</li>
+            <li>Doing Something</li>
+            <li>Doing Something</li>
+            <li>Doing Something</li>
+            <li>Doing Something</li>
+            <li>Doing Something</li>
+          </ul>
+          <div className='Footer'>Footer</div>
+        </div> 
+
+        <div className='column'>
+          <div className='Header'>Header</div>
+          <ul>
+            <li>
+              <img src='https://haycafe.vn/wp-content/uploads/2022/02/Anh-gai-xinh-Viet-Nam.jpg' alt=''/>
+              title: SomrThing
+            </li>
+            <li>Doing Something</li>
+            <li>Doing Something</li>
+            <li>Doing Something</li>
+            <li>Doing Something</li>
+            <li>Doing Something</li>
+            
+          </ul>
+          <div className='Footer'>Footer</div>
+        </div>  
+
+      </div>
     </div>
   );
 }
