@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600");
+
+$board-color: aquamarine;
+$nav-app-color: rgb(101, 196, 164);
+$column-header-height: 36px;
+$column-footer-height: 36px;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Source San Pro', sans-serif;
+    font-size: 14px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+#App {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 40px 50px 1fr;
+    background-color:aquamarine;
+    
+    .navbar {
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        &.app {
+            background-color: $nav-app-color;
+            font-size: 1.5rem;
+        }
+        &.board {
+            background-color: $board-color;
+        }
+    }
+
+    .board-columns {
+        overflow-x: auto;
+        display: flex;
+        .column {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            height: calc(100% -10px);
+            margin-left: 20px;
+            &:first-child {
+                margin-left: 10px;
+            }
+            > * {
+                background-color: azure;
+                color: #333;
+                padding: 0 8px;
+            }
+            .Header {
+                font-size: 16px;
+                padding-left: 15px;
+                line-height: $column-header-height;
+                font-weight: bold;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+            .Footer {
+                font-size: 16px;
+                padding-left: 15px;
+                line-height: $column-footer-height;
+                font-weight: bold;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+            ul {
+                max-height: calc(100% - #{$column-header-height} - #{$column-header-height});
+                overflow-y: auto;
+                &::-webkit-scrollbar {
+                    -webkit-appearance: none;
+                }
+                &::-webkit-scrollbar:vertical {
+                    width: 5px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: darken($color: azure, $amount: 15);
+                }
+                li {
+                    background-color: rgb(232, 244, 244);
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    border-radius: 5px;
+                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                  img {
+                    width: calc(100% - 0px);
+                  }  
+                }
+                
+            }
+            
+        }
+    }
+}
